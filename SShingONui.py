@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'windowMaximized.ui'
+# Form implementation generated from reading ui file 'actions2.ui'
 #
-# Created: Tue Jun  2 17:02:27 2015
+# Created: Wed Jun 10 01:53:37 2015
 #      by: PyQt4 UI code generator 4.10.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -26,13 +26,12 @@ except AttributeError:
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(703, 479)
+        MainWindow.resize(529, 382)
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
         self.horizontalLayout = QtGui.QHBoxLayout(self.centralwidget)
         self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
         self.tabWidget = QtGui.QTabWidget(self.centralwidget)
-        self.tabWidget.setTabsClosable(True)
         self.tabWidget.setObjectName(_fromUtf8("tabWidget"))
         self.tab = QtGui.QWidget()
         self.tab.setObjectName(_fromUtf8("tab"))
@@ -43,12 +42,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.tabWidget)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 703, 27))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 529, 27))
         self.menubar.setObjectName(_fromUtf8("menubar"))
-        self.menuArchivo = QtGui.QMenu(self.menubar)
-        self.menuArchivo.setObjectName(_fromUtf8("menuArchivo"))
-        self.menuEdit = QtGui.QMenu(self.menubar)
-        self.menuEdit.setObjectName(_fromUtf8("menuEdit"))
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtGui.QStatusBar(MainWindow)
         self.statusbar.setObjectName(_fromUtf8("statusbar"))
@@ -59,17 +54,13 @@ class Ui_MainWindow(object):
         self.dockWidgetContents.setObjectName(_fromUtf8("dockWidgetContents"))
         self.verticalLayout = QtGui.QVBoxLayout(self.dockWidgetContents)
         self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
-        self.treeWidget = QtGui.QTreeWidget(self.dockWidgetContents)
-        self.treeWidget.setEditTriggers(QtGui.QAbstractItemView.DoubleClicked|QtGui.QAbstractItemView.EditKeyPressed|QtGui.QAbstractItemView.SelectedClicked)
-        self.treeWidget.setObjectName(_fromUtf8("treeWidget"))
-        self.treeWidget.headerItem().setText(0, _fromUtf8("1"))
-        self.verticalLayout.addWidget(self.treeWidget)
+        self.treeView = QtGui.QTreeView(self.dockWidgetContents)
+        self.treeView.setObjectName(_fromUtf8("treeView"))
+        self.verticalLayout.addWidget(self.treeView)
         self.dockWidget.setWidget(self.dockWidgetContents)
         MainWindow.addDockWidget(QtCore.Qt.DockWidgetArea(1), self.dockWidget)
-        self.actionLeftClick = QtGui.QAction(MainWindow)
-        self.actionLeftClick.setObjectName(_fromUtf8("actionLeftClick"))
-        self.menubar.addAction(self.menuArchivo.menuAction())
-        self.menubar.addAction(self.menuEdit.menuAction())
+        self.actionAbrirContexto = QtGui.QAction(MainWindow)
+        self.actionAbrirContexto.setObjectName(_fromUtf8("actionAbrirContexto"))
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -78,10 +69,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Tab 1", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Tab 2", None))
-        self.menuArchivo.setTitle(_translate("MainWindow", "Archivo", None))
-        self.menuEdit.setTitle(_translate("MainWindow", "Edit", None))
-        self.treeWidget.setSortingEnabled(True)
-        self.actionLeftClick.setText(_translate("MainWindow", "leftClick", None))
+        self.actionAbrirContexto.setText(_translate("MainWindow", "abrirContexto", None))
 
 
 if __name__ == "__main__":
